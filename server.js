@@ -1,7 +1,9 @@
 const express = require('express');
 const logger = require('morgan');
 const jwt = require('jsonwebtoken')
+const helmet = require('helmet');
 const app = express();
+app.use(helmet());
 app.use(express.json());
 app.use(logger('dev'));
 
